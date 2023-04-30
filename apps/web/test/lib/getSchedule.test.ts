@@ -145,7 +145,7 @@ const TestData = {
         expiry_date: Infinity,
         client_id: "client_id",
         client_secret: "client_secret",
-        redirect_uris: ["http://localhost:3000/auth/callback"],
+        redirect_uris: ["http://localhost:7000/auth/callback"],
       },
     },
   },

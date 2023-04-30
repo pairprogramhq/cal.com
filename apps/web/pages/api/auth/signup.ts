@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const data = req.body;
-  const { email, password } = data;
+  const { email, password, name } = data;
   const username = slugify(data.username);
   const userEmail = email.toLowerCase();
 
@@ -62,12 +62,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     where: { email: userEmail },
     update: {
       username,
+      name,
       password: hashedPassword,
       emailVerified: new Date(Date.now()),
       identityProvider: IdentityProvider.CAL,
     },
     create: {
       username,
+      name,
       email: userEmail,
       password: hashedPassword,
       identityProvider: IdentityProvider.CAL,

@@ -18,6 +18,8 @@ import {
 } from "@calcom/ui";
 import { FiLink, FiPlus } from "@calcom/ui/components/icon";
 
+// import Cal from "@calcom/embed-react";
+
 const ApiKeysView = () => {
   const { t } = useLocale();
 
@@ -48,6 +50,8 @@ const ApiKeysView = () => {
         title={t("api_keys")}
         description={t("create_first_api_key_description", { appName: APP_NAME })}
       />
+
+      {/*<Cal calLink="timwheeler/pair-program" />*/}
 
       <LicenseRequired>
         <>

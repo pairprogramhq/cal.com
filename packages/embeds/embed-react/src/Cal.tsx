@@ -38,6 +38,18 @@ const Cal = function Cal(props: CalProps) {
       calLink,
       config,
     });
+    Cal("on", {
+      action: "eventTypeSelected",
+      callback: (event: any) => {
+        console.log("eventTypeSelected:", event);
+      },
+    });
+    Cal("on", {
+      action: "bookingSuccessful",
+      callback: (event: any) => {
+        console.log("bookingSuccessful:", event);
+      },
+    });
   }, [Cal, calLink, config, calOrigin, initConfig]);
 
   if (!Cal) {
